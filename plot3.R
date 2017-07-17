@@ -27,5 +27,5 @@ pm25baltimore <- filter(NEI,fips=="24510")
 
 #Plotting
 baltimoreplot <- ggplot(pm25baltimore, aes(x=year,y=log10(Emissions), group=year)) + geom_boxplot()
-baltimoreplot + facet_grid(.~type)  
+baltimoreplot + facet_grid(.~type)  + ggtitle("Baltimore Emissions")
 ggsave("Plot3.png",width=20,height=10)
